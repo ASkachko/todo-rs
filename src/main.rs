@@ -1,6 +1,6 @@
 use termion::raw::IntoRawMode;
-use termion::{color, style};
 use termion::scroll;
+use termion::{color, style};
 
 use std::io;
 
@@ -9,7 +9,9 @@ fn main() {
     println!("{}blue", color::Fg(color::Blue));
     println!("{}Yellow", color::Fg(color::Yellow));
 
-    println!("{}Scroll", scroll::Up(12))
+    println!("{}Scroll", scroll::Up(12));
+
+    println!("test");
 
     /* println!( */
     /* "{}{}Stuff", */
