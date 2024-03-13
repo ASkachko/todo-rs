@@ -4,7 +4,7 @@ use clap::Parser;
 #[command(version, about, long_about = None)]
 struct Args {
     #[arg(short, long)]
-    name: String,
+    todo: String,
 
     #[arg(short, long, default_value_t = 1)]
     count: u8,
@@ -12,9 +12,11 @@ struct Args {
 
 fn main() {
     let args = Args::parse();
+    let mut todos: Vec<String> = Vec::new();
 
-    for _ in 0..args.count {
-        println!("Hello {}", args.name)
-    }
-    println!("Hello, there!");
+    let added_todo: String = args.todo.to_string();
+
+    todos.push(added_todo);
+
+    println!("Hello, there! your todos: {:?}", todos);
 }
